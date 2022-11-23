@@ -49,5 +49,9 @@ function RPS() {
         console.log("draw")
     }
 }
-
-RPS()
+function game() {
+    for (let i=0; i<5; i++){
+        RPS()
+    }
+}
+game()
