@@ -1,23 +1,27 @@
 //constants//
-const rock = "rock";
-const paper = "paper";
-const scissors = "scissors";
 const choices = [rock, paper, scissors];
 
+
+//user selects//
+const userChoiceRock = document.getElementById("rock");
+userChoiceRock.addEventListener("click", function(){
+    RPS(rock)
+});
+
+const userChoicePaper = document.getElementById("paper");
+userChoicePaper.addEventListener("click", function(){
+    RPS(paper)
+});
+
+const userChoiceScissors = document.getElementById("scissors");
+userChoiceScissors.addEventListener("click", function(){
+    RPS(scissors)
+});
+
+
+
 //rock paper scissors game//
-function RPS() {
-    //user selects//
-    let UserChoice = prompt("Rock, paper or scissors?");
-    UserChoice = UserChoice.toLowerCase()
-    if (UserChoice === "rock") {
-        UserChoice = rock
-    }
-    else if (UserChoice === "paper") {
-        UserChoice = paper
-    }
-    else {
-        UserChoice = scissors
-    }
+function RPS(UserChoice) {
     console.log(UserChoice)
     //computer selects//
     let ComputerChoice = choices[Math.floor(Math.random() * choices.length)];
@@ -49,9 +53,3 @@ function RPS() {
         console.log("draw")
     }
 }
-function game() {
-    for (let i=0; i<5; i++){
-        RPS()
-    }
-}
-game()
