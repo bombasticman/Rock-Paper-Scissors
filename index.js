@@ -14,15 +14,15 @@ playerScore.innerHTML = 0
 
 //user options//
 //user selects rock//
-userChoiceRock.addEventListener("click", function(){
+userChoiceRock.addEventListener("click", function () {
     RPS(rock)
 });
 //user selects paper//
-userChoicePaper.addEventListener("click", function(){
+userChoicePaper.addEventListener("click", function () {
     RPS(paper)
 });
 //user selects scissors//
-userChoiceScissors.addEventListener("click", function(){
+userChoiceScissors.addEventListener("click", function () {
     RPS(scissors)
 });
 
@@ -43,14 +43,14 @@ function RPS(UserChoice) {
         result.textContent = "Rock loses!";
         let oldValue = parseInt(computerScore.innerHTML)
         console.log(oldValue)
-        computerScore.innerHTML = oldValue+1
+        computerScore.innerHTML = oldValue + 1
     }
     //user wins//
     else if (UserChoice === rock && ComputerChoice === scissors) {
         result.textContent = "Rock wins!"
         let oldValue = parseInt(playerScore.innerHTML)
         console.log(oldValue)
-        playerScore.innerHTML = oldValue+1
+        playerScore.innerHTML = oldValue + 1
     }
     //User selected paper//
     //user wins// 
@@ -58,14 +58,14 @@ function RPS(UserChoice) {
         result.textContent = "Paper wins!"
         let oldValue = parseInt(playerScore.innerHTML)
         console.log(oldValue)
-        playerScore.innerHTML = oldValue+1
+        playerScore.innerHTML = oldValue + 1
     }
     //user loses//
     else if (UserChoice === paper && ComputerChoice === scissors) {
         result.textContent = "Paper loses!"
         let oldValue = parseInt(computerScore.innerHTML)
         console.log(oldValue)
-        computerScore.innerHTML = oldValue+1
+        computerScore.innerHTML = oldValue + 1
     }
     //User selected scissors//
     //user loses//
@@ -73,27 +73,17 @@ function RPS(UserChoice) {
         result.textContent = "Scissors loses!"
         let oldValue = parseInt(computerScore.innerHTML)
         console.log(oldValue)
-        computerScore.innerHTML = oldValue+1
+        computerScore.innerHTML = oldValue + 1
     }
     //user wins//
     else if (UserChoice === scissors && ComputerChoice === paper) {
         result.textContent = "Scissors wins!"
         let oldValue = parseInt(playerScore.innerHTML)
         console.log(oldValue)
-        playerScore.innerHTML = oldValue+1
+        playerScore.innerHTML = oldValue + 1
     }
     //draw//
     else {
         result.textContent = "Draw!"
     }
-<<<<<<< HEAD
 }
-function game() {
-    for (let i=0; i<5; i++){
-        RPS()
-    }
-}
-game()
-=======
-}
->>>>>>> rps-ui
